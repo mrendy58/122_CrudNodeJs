@@ -1,0 +1,427 @@
+/*style untuk home page */
+/* Video background */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the area */
+  z-index: -2; /* Video is in the background */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: -1; /* Overlay is above video */
+}
+
+/* Content over video */
+.content-overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center */
+  text-align: center;
+  color: white; /* Contrast with video background */
+  z-index: 1; /* Above video and overlay */
+}
+
+.content-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.content-overlay .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.content-overlay .btn:hover {
+  background-color: #0056b3;
+}
+
+/*style untuk navbar */
+/* Warna navbar */
+.custom-navbar {
+  background-color: #001f3f; /* Biru dongker */
+  padding: 0.5rem 1rem;
+}
+
+/* Logo dalam navbar */
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Warna teks di navbar */
+.nav-link,
+.navbar-brand {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffdd57 !important; /* Warna hover kuning */
+}
+
+/* Button toggle (hamburger) warna putih */
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Untuk menyesuaikan tampilan responsif */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+/* Footer Styling */
+.custom-footer {
+  background-color: #001f3f; /* Warna biru dongker, sama dengan navbar */
+  color: white;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.custom-footer a {
+  color: #ffdd57; /* Warna kuning untuk link */
+  text-decoration: none;
+}
+
+.custom-footer a:hover {
+  color: #ffd700; /* Warna hover kuning cerah */
+}
+
+.custom-footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/*style untuk login */
+/* Login Container */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #d4d4d4; /* Pastel warna netral */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo */
+.login-logo img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+/* Heading */
+.login-container h1 {
+  font-size: 2rem;
+  color: #001f3f; /* Warna biru dongker dari navbar */
+  margin-bottom: 1.5rem;
+}
+
+/* Form Labels and Inputs */
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #001f3f; /* Warna biru dongker */
+  border-color: #001f3f;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Biru lebih terang saat hover */
+}
+
+/* Link */
+.login-container a {
+  color: #007bff; /* Biru pastel */
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 576px) {
+  .login-container {
+    margin: 20px auto;
+    padding: 1.5rem;
+  }
+}
+/*style untuk signup */
+/* Signup Container */
+.signup-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #d4d4d4; /* Pastel warna netral */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo */
+.signup-logo img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+/* Heading */
+.signup-container h1 {
+  font-size: 2rem;
+  color: #001f3f; /* Warna biru dongker dari navbar */
+  margin-bottom: 1.5rem;
+}
+
+/* Form Labels and Inputs */
+.form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #001f3f; /* Warna biru dongker */
+  border-color: #001f3f;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Biru lebih terang saat hover */
+}
+
+/* Link */
+.signup-container a {
+  color: #007bff; /* Biru pastel */
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 576px) {
+  .signup-container {
+    margin: 20px auto;
+    padding: 1.5rem;
+  }
+}
+/*style untuk contact */
+/* Contact Container */
+.contact-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #b9d0f3; /* Warna pastel netral */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Heading */
+.contact-container h1 {
+  font-size: 2.5rem;
+  color: #001f3f; /* Warna biru dongker */
+  margin-bottom: 0.5rem;
+}
+
+.contact-container p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Form Labels and Inputs */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.form-control {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Textarea */
+textarea.form-control {
+  resize: none;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #001f3f; /* Warna biru dongker */
+  border: none;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Biru lebih terang saat hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 576px) {
+  .contact-container {
+    margin: 20px auto;
+    padding: 1.5rem;
+  }
+}
+
+/* Style untuk Todo */
+/* Todo Cards */
+.todo-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #b9d0f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Menambahkan jarak bawah untuk setiap card */
+    padding: 15px; /* Memberikan padding pada card agar konten tidak menempel ke tepi */
+}
+
+.todo-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Titles */
+.todo-card .card-title {
+    font-size: 1.25rem;
+    color: #333;
+    text-align: center; /* Menjaga judul di tengah */
+    margin-bottom: 15px; /* Memberikan jarak bawah pada judul */
+}
+
+/* Text Task */
+.todo-card h6 {
+    text-align: center; /* Menjaga teks task di tengah */
+    margin-bottom: 20px; /* Memberikan jarak bawah antara task dan tombol */
+}
+
+/* Buttons */
+.todo-card .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Add and Edit Buttons */
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Tombol Edit dan Delete agar di tengah */
+.todo-card .d-flex {
+    justify-content: center; /* Menjaga tombol di tengah */
+    gap: 10px; /* Memberi jarak antar tombol */
+    align-items: center;
+    width: 100%; /* Memastikan tombol mengambil lebar penuh */
+}
+
+/* Modal Forms */
+.modal .form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.modal .form-control {
+    border-radius: 5px;
+    padding: 0.75rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .todo-card {
+        margin-bottom: 15px; /* Mengurangi jarak bawah pada tampilan kecil */
+    }
+
+    /* Tombol edit dan delete full-width pada tampilan kecil */
+    .todo-card .d-flex {
+        flex-direction: column;
+        gap: 10px; /* Menambah jarak antar tombol pada layar kecil */
+    }
+}
